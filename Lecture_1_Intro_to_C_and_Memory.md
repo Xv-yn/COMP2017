@@ -79,8 +79,8 @@ subgraph VM ["Virtual Memory"]
     A1 --> A2 --> A3 --> A4
 end
 
-A2 --> A7
-A3 --> A8
+A2 --> node8
+A3 --> node7
 ```
 
 As such, in theory, we do have a "large" amount of memory. By re-assigning and re-organizing memory that is currently being used and not used (done by the Operating System), it allows for a more efficient use of the Physical Memory. 
