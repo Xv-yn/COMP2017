@@ -10,9 +10,9 @@ Memory in a computer can be imagined as a table.
 Every addressable part of memory is 1 byte. In other words, the size of the amount of data that is stored in each address is 1 byte.
 
 1 byte = 8 bits
-8 bits = ==00000000==
+8 bits = **00000000**
 
-Note that ==00000000== is a bit pattern (a bit pattern is a representation of binary data), and this bit pattern can mean anything (e.g. 0, 27, -5). Simply put, we can assign a meaning to this bit pattern, which is then stored in memory.
+Note that **00000000** is a bit pattern (a bit pattern is a representation of binary data), and this bit pattern can mean anything (e.g. 0, 27, -5). Simply put, we can assign a meaning to this bit pattern, which is then stored in memory.
 
 ###### Placement of Memory
 For understanding purposes, say we declare a variable:
@@ -99,7 +99,7 @@ node1("Code") --- node2("Static/Global") --- node3("Heap") --- node4("Stack")
 
 
 #### Introduction to C
-Unlike Python, the C language is highly customizable. This also means that things that are usually omitted in python, like basic functions/commands, must be included when initializing code. Note that ==Data Types is NOT covered here==.
+Unlike Python, the C language is highly customizable. This also means that things that are usually omitted in python, like basic functions/commands, must be included when initializing code. Note that **==**Data Types is NOT covered here**.
 
 A 'Hello World!' program for C is written as:
 ```
@@ -122,7 +122,7 @@ Its like telling the computer to 'include' a certain file (that contains functio
 
 The `<>` indicates that the file to be 'imported' (included) is a file that is in the standard system directory (the installed C language itself).
 
-The `stdio.h` stands for Standard Input/Output Header. This is a library, a file with functions, located inside the standard system directory, like its name, contains standard functions used in coding (with standard inputs and outputs). Because this file contains only functions (it can be said that this file is used to declare functions), and likely other tools useful in coding (this is not the only file like this in the standard system directory, such as files that declare data types, macros, and other declarations), it is labelled as a ==header== file. Hence, the `.h` that follows `stdio`.
+The `stdio.h` stands for Standard Input/Output Header. This is a library, a file with functions, located inside the standard system directory, like its name, contains standard functions used in coding (with standard inputs and outputs). Because this file contains only functions (it can be said that this file is used to declare functions), and likely other tools useful in coding (this is not the only file like this in the standard system directory, such as files that declare data types, macros, and other declarations), it is labelled as a **header** file. Hence, the `.h` that follows `stdio`.
 
 In more basic terms, a 'direct translation' of the code is: "Include the standard input output header file".
 
@@ -144,8 +144,8 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-`int argc` is the ==arg==ument ==c==ount of command-line arguments (It is assumed you know how to run a program through a command line, usually by entering: `./my_program arg1 arg2 arg3` in a command line). Hence, it returns an `int` (integer) value. If `./my_program arg1 arg2 arg3`, was entered into the command line, the output of `argc` is 4. Note that `argc` can be replaced with any variable name, `argc` is just for convention and easier readability.
+`int argc` is the **arg**ument **c**ount of command-line arguments (It is assumed you know how to run a program through a command line, usually by entering: `./my_program arg1 arg2 arg3` in a command line). Hence, it returns an `int` (integer) value. If `./my_program arg1 arg2 arg3`, was entered into the command line, the output of `argc` is 4. Note that `argc` can be replaced with any variable name, `argc` is just for convention and easier readability.
 
-`char *argv[]` is the array of pointer strings in the command-line arguments. It stands for "==arg==ument ==v==ector", with 'vector' meaning an 'ordered' array. Because a string is an array of `char`acters, and characters in a certain order gives us legible words or specific inputs, `argv[]` is used to represent the inputs in the command-line arguments as an array. The asterisk, `*`, is what denotes the array as a pointer (a pointer is something, technically a 'variable', that stores the memory address of a variable). Hence, when an input is entered into the command-line, that input is 'stored' in a memory address. Thus, the computer will have to go back to the memory address when referencing the command-line arguments.
+`char *argv[]` is the array of pointer strings in the command-line arguments. It stands for "**arg**ument **v**ector", with 'vector' meaning an 'ordered' array. Because a string is an array of `char`acters, and characters in a certain order gives us legible words or specific inputs, `argv[]` is used to represent the inputs in the command-line arguments as an array. The asterisk, `*`, is what denotes the array as a pointer (a pointer is something, technically a 'variable', that stores the memory address of a variable). Hence, when an input is entered into the command-line, that input is 'stored' in a memory address. Thus, the computer will have to go back to the memory address when referencing the command-line arguments.
 
 Similarly, note that `argv` can be replaced with any variable name, `argv` is just for convention and easier readability (E.g. `*argumentvector[]` instead of `*argv[]` is also possible).
