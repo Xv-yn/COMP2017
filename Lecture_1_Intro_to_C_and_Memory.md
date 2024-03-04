@@ -14,6 +14,42 @@ Every addressable part of memory is 1 byte. In other words, the size of the amou
 
 Note that **00000000** is a bit pattern (a bit pattern is a representation of binary data), and this bit pattern can mean anything (e.g. 0, 27, -5). Simply put, we can assign a meaning to this bit pattern, which is then stored in memory.
 
+A more specific visual representation of the memory occupied by an `int` can be seen in the table below:
+
+Memory Address    | Content
+------------------|--------
+0x00000000        | [Byte 1]
+0x00000001        | [Byte 2]
+0x00000002        | [Byte 3]
+0x00000003        | [Byte 4]
+
+
+Memory Address    | Content
+------------------|--------
+0x00000000        | 00101010 (Binary representation of 42)
+0x00000001        | 00000000
+0x00000002        | 00000000
+0x00000003        | 00000000
+
+A breakdown of the possible values that can be represented by **one byte** is as follows:
+- Binary: 00000000 to 11111111
+- Decimal: 0 to 255
+- Hexadecimal: 00 to FF
+
+While the size of each datatype varies by build (physical build),
+- char: 1 byte
+- short: 2 bytes
+- int: 4 bytes
+- long: 4 or 8 bytes
+- long long: 8 bytes
+- float: 4 bytes
+- double: 8 bytes
+- long double: Can vary (commonly 8 or 16 bytes)
+- Pointers
+    - On 32-bit systems: 4 bytes
+    - On 64-bit systems: 8 bytes
+
+
 ###### Placement of Memory
 For understanding purposes, say we declare a variable:
 ```
@@ -83,7 +119,7 @@ A3 --> node7
 As such, in theory, we do have a "large" amount of memory. By re-assigning and re-organizing memory that is currently being used and not used (done by the Operating System), it allows for a more efficient use of the Physical Memory. 
 Note that each program is 'not aware' of this 'juggling' of memory and is run as needed. The Operating System is what 'juggles' the memory.
 
-It is important to note that the Physical Memory does not store the data we intend, but rather, addresses (linked) to that data. This means that somewhere inside the compilation pipeline (where the program is traslated into machine code/code that the computer reads), when we compile the `int x = 8` (Programming Language), we get an address, for example, `0x2048, 8;` (Assembly Language, linking the data `8` to the address).
+It is important to note that the Physical Memory does not store the data we intend, but rather, addresses (linked) to that data. This means that somewhere inside the compilation pipeline (where the program is traslated into machine code/code that the computer reads), when we compile the `int x = 8` (Programming Language), we get an address, for example, `0x2048, 8;` (Assembly Language, linking the data `8` to the address `0x2048`).
 
 Virtual Memory is generally structed in the same way for almost all programmes because its much easier to recognize. There are many other divisions of memory, but he 4 main ones are as follows.
 
@@ -99,7 +135,7 @@ node1("Code") --- node2("Static/Global") --- node3("Heap") --- node4("Stack")
 
 
 #### Introduction to C
-Unlike Python, the C language is highly customizable. This also means that things that are usually omitted in python, like basic functions/commands, must be included when initializing code. Note that **==**Data Types is NOT covered here**.
+Unlike Python, the C language is highly customizable. This also means that things that are usually omitted in python, like basic functions/commands, must be included when initializing code. Note that **Data Types is NOT covered here**.
 
 A 'Hello World!' program for C is written as:
 ```
