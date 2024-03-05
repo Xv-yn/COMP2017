@@ -66,7 +66,25 @@ Using the understand of memory, this array would take up 10 bytes of memory in c
 
 Because '`Hello`' contains 5 characters, each character would logically take up the memory addresses `&myString[0]` to `&myString[4]`. However, for the computer to consider this array of characters as a valid `String`, there must be a null terminator to indicate the end of the string. Hence, the null terminator takes up the memory address: `myString[5]`.
 
-When creating a "`String`" that has no room for the null terminator in the character array, it could lead to unexpected behavior and undefined results when calling it because it is not considered a "valid" String.
+When creating a "`String`" that has no room for the null terminator in the character array, it could lead to unexpected behavior and undefined results when calling it because it is not considered a "valid" String and does not have a 'defined' end (meaning that a computer could continue reading the consecutive memory addresses as it has not been 'told' to stop).
 ```
 char myString[5] = "Hello";  // No room for the null terminator
 ```
+
+#### Command Line Arguments
+
+```
+int main(int arc, char **argv) {
+    return 0;
+}
+```
+
+argv is an array of C strings from the command line argument (it is an array of addresses where each address refers to a C string (The data type of a C string is a character array/ char *))
+
+```
+C: \Users\myComputer> .\myProgram.c
+```
+
+
+
+
