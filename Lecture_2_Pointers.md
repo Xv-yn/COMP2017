@@ -86,5 +86,16 @@ C: \Users\myComputer> .\myProgram.c
 ```
 
 
+#### Signed and Unsigned Values
 
+A signed value can represent both positive and negative values and are initialized like so:
+
+```
+short y = 32767;
+```
+
+An unsigned value can only represent non-negative values (Only positive values) and are initialized like so:
+```
+unsigned short y = 32767;
+```
 
